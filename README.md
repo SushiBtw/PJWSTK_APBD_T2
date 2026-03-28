@@ -56,8 +56,8 @@ temu można łatwo wymienić implementację `FeeCalculator` bez konieczności mo
 ### 3. Dziedziczenie i Polimorfizm
 
 Zastosowałem dziedziczenie (domenowe). Zamiast sprawdzać za pomocą instrukcji `if` typ użytkownika podczas wypożyczania,
-klasy `Student` i `Employee` same definiują swoją właściwość `MaxActiveRentals` (2 i 5). Pozwoliło to na
-eleganckie wykorzystanie polimorfizmu do walidacji limitów.
+klasy `Student` i `Employee` same definiują swoją właściwość `MaxActiveRentals` (2 i 5). Dzięki temu sprawdzanie limitu
+wypożyczeń odbywa się poprzez polimorfizm, a nie instrukcje warunkowe.
 
 # Credits
 
