@@ -11,14 +11,6 @@ namespace PJWSTK_APBD_T2
             RentalService rentalService = new RentalService(feeCalculator);
 
             Console.WriteLine("=== Scenariusz demonstracyjny ===");
-            // 11. Dodanie kilku egzemplarzy sprzętu różnych typów.
-            // 12. Dodanie kilku użytkowników różnych typów.
-            // 13. Poprawne wypożyczenie sprzętu.
-            // 14. Próbę wykonania niepoprawnej operacji, np. wypożyczenia sprzętu niedostępnego albo
-            // przekroczenia limitu.
-            // 15. Zwrot sprzętu w terminie.
-            // 16. Zwrot opóźniony skutkujący naliczeniem kary.
-            // 17. Wyświetlenie raportu końcowego o stanie systemu.
 
             Console.WriteLine("11. Dodanie kilku egzemplarzy sprzętu różnych typów.");
 
