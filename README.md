@@ -2,6 +2,17 @@
 
 Projekt obiektowy w C# - który realizuje oraz demonstruje system uczelnianej wypożyczalni sprzętu.
 
+## Instrukcja pobierania
+
+1. Pobierz projekt z repozytorium git:
+   ```
+   git clone https://github.com/SushiBtw/PJWSTK_APBD_T2.git
+   ```
+2. Przejdź do katalogu projektu:
+   ```
+   cd PJWSTK_APBD_T2
+   ```
+
 ## Instrukcja uruchomienia (IDE)
 
 1. Otwórz rozwiązanie (`PJWSTK_APBD_T2.sln`) w środowisku IDE (preferowane: JetBrains Rider - w nim robiłem).
@@ -27,6 +38,26 @@ Projekt obiektowy w C# - który realizuje oraz demonstruje system uczelnianej wy
 
 Projekt został podzielony na: **Models** (modele), **Services** (logikę) oraz **Program.cs** (skrypt testowy). Podział
 ten gwarantuje czytelność oraz zgodnie z założeniami pozbywamy się działania na jednym pliku.
+
+### 1. Kohezja
+
+Każda klasa ma jasno określoną odpowiedzialność.
+
+- **Models**: Zawierają tylko dane i ewentualnie proste metody pomocnicze.
+- **Services**: Zawierają logikę, operacje na danych oraz zarządzanie stanem. Np: `RentalService` zarządza
+  wypożyczeniami, a `FeeCalculator` oblicza opłaty.
+
+### 2. Coupling
+
+Klasy są luźno powiązane. Na przykład, `RentalService` korzysta z `FeeCalculator`, ale nie jest od niego zależny. Dzięki
+temu można łatwo wymienić implementację `FeeCalculator` bez konieczności modyfikowania
+`RentalService`.
+
+### 3. Dziedziczenie i Polimorfizm
+
+Zastosowałem dziedziczenie (domenowe). Zamiast sprawdzać za pomocą instrukcji `if` typ użytkownika podczas wypożyczania,
+klasy `Student` i `Employee` same definiują swoją właściwość `MaxActiveRentals` (2 i 5). Pozwoliło to na
+eleganckie wykorzystanie polimorfizmu do walidacji limitów.
 
 # Credits
 
